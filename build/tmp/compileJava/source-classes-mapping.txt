@@ -1,14 +1,12 @@
-Experiments.java
- Experiments
-ButtonsInHead.java
- ButtonsInHead
-StringForInput.java
- StringForInput
-Main.java
- Main
 Head.java
  Head
 LessThenThreeAuthors.java
  LessThenThreeAuthors
+Main.java
+ Main
+ButtonsInHead.java
+ ButtonsInHead
+StringForInput.java
+ StringForInput
 MoreThenThreeAuthers.java
  MoreThenThreeAuthers

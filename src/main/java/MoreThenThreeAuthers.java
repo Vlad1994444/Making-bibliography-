@@ -6,7 +6,11 @@ public class MoreThenThreeAuthers extends JFrame {
 
     JButton button;
 
+    ImageIcon icon;
+
     public MoreThenThreeAuthers() {
+
+        icon = new ImageIcon(getClass().getResource("/icon.png"));
 
         this.setSize(600, 200);
         try {
@@ -17,7 +21,7 @@ public class MoreThenThreeAuthers extends JFrame {
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setLayout(new GridLayout(5, 3));
         this.setVisible(true);
-        this.setIconImage(Head.icon.getImage());
+        this.setIconImage(icon.getImage());
 
         StringForInput nameOfBook = new StringForInput("Название книги");
         StringForInput firstNameLetter = new StringForInput("Заглавная буква имени первого автора");
@@ -66,7 +70,7 @@ public class MoreThenThreeAuthers extends JFrame {
                 ioException.printStackTrace();
             }
             this.setSize(1500, 200);
-            this.setIconImage(Head.icon.getImage());
+            this.setIconImage(icon.getImage());
             this.setVisible(true);
         });
 

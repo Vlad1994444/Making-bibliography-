@@ -10,7 +10,11 @@ public class LessThenThreeAuthors extends JFrame{
 
     JButton button;
 
+    ImageIcon icon;
+
     public LessThenThreeAuthors(){
+
+        icon = new ImageIcon(getClass().getResource("/icon.png"));
 
         this.setSize(600,200);
         try {
@@ -19,7 +23,7 @@ public class LessThenThreeAuthors extends JFrame{
             e.printStackTrace();
         }
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        this.setIconImage(Head.icon.getImage());
+        this.setIconImage(icon.getImage());
         this.setLayout(new GridLayout(3,3));
         this.setVisible(true);
 
@@ -104,7 +108,7 @@ public class LessThenThreeAuthors extends JFrame{
                 ioException.printStackTrace();
             }
             this.setSize(1500,200);
-            this.setIconImage(Head.icon.getImage());
+            this.setIconImage(icon.getImage());
             this.setVisible(true);
         });
 

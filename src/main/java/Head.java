@@ -5,7 +5,7 @@ import java.nio.charset.Charset;
 
 public class Head extends JFrame{
 
-    public static ImageIcon icon = new ImageIcon("src\\main\\java\\icon.png");
+    ImageIcon icon;
 
     public static String decodeText(String input, String encoding) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(new ByteArrayInputStream(input.getBytes()), Charset.forName(encoding)));
@@ -48,11 +48,14 @@ public class Head extends JFrame{
 
 
     public Head() {
+
+        icon = new ImageIcon(getClass().getResource("/icon.png"));
+
         JPanel panel = new JPanel();
         panel.setLayout(null);
         panel.setBounds(0,0,600,399);
 
-        ImageIcon book = new ImageIcon("src\\main\\java\\book.jpg");
+        ImageIcon book = new ImageIcon(getClass().getResource("/book.jpg"));
         JLabel backPicture = new JLabel(book);
         backPicture.setBounds(0,0,600,399);
 
@@ -85,7 +88,7 @@ public class Head extends JFrame{
         panel.add(backPicture);
 
         this.setSize(600, 399);
-        ImageIcon icon = new ImageIcon("src\\main\\java\\icon.png");
+        ImageIcon icon = new ImageIcon(getClass().getResource("/icon.png"));
         this.setIconImage(icon.getImage());
         try {
             this.setTitle(decodeText("Список литературы","UTF-8"));
